@@ -13,7 +13,7 @@ const koaStatic = require('koa-static')
 
 const app = new Koa()
 let ENV = process.argv.splice(2, 2)[1] || 'development'
-const port = ENV === 'development' ? 3000 : 80
+const port = ENV === 'development' ? 3000 : 8081
 app.env = global.env = ENV
 app.context.env = app.env
 serverConfig.logFN(app)

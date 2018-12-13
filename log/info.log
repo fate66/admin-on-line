@@ -8,3 +8,5 @@
 [2018-12-13T18:22:54.552] [INFO] info - 本次请求的参数---- { token: undefined, userId: undefined }
 [2018-12-13T18:23:35.731] [INFO] info - -------start--------d311accc-5a92-4dd2-987c-e0e8c9187db9---------------
 [2018-12-13T18:23:35.731] [INFO] info - 本次请求的参数---- { token: undefined, userId: undefined }
+[2018-12-13T18:25:59.214] [INFO] info - 当前的执行环境--- development
+[2018-12-13T18:25:59.216] [INFO] info - app started at port 3000...
