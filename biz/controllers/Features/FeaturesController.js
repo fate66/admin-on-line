@@ -10,7 +10,8 @@ export default class Features {
         let error = ''
         let res = ''
         try {
-            execSync('git pull', {cwd: '/root/web-admin'})
+            let pull = execSync('git pull', {cwd: '/root/web-admin'})
+            ctx.infoLog.info('Git pull：', pull)
         } catch (e) {
             ctx.infoLog.info(e)
             error = e
@@ -18,6 +19,7 @@ export default class Features {
         if (!error) {
             try {
                 res = execSync(cmdNpm, {cwd: '/root/web-admin'})
+                ctx.infoLog.info('npm run build：', res)
             } catch (e) {
                 ctx.infoLog.info(e)
                 error = e
@@ -25,7 +27,8 @@ export default class Features {
         }
         if (!error) {
             try {
-                execSync('cp -rf /root/web-admin/dist/* /root/admin-server/static')
+                let cp = execSync('cp -rf /root/web-admin/dist/* /root/admin-server/static')
+                ctx.infoLog.info('cp：', cp)
             } catch (e) {
                 ctx.infoLog.info(e)
                 error = e
