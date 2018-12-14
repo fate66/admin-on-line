@@ -11,7 +11,7 @@ export default class Features {
         let res = ''
         try {
             let pull = execSync('git pull', {cwd: '/root/web-admin'})
-            ctx.infoLog.info('Git pull：', pull)
+            ctx.infoLog.info('Git pull：', pull.toString())
         } catch (e) {
             ctx.infoLog.info(e)
             error = e
@@ -28,7 +28,7 @@ export default class Features {
         if (!error) {
             try {
                 let cp = execSync('cp -rf /root/web-admin/dist/* /root/admin-server/static')
-                ctx.infoLog.info('cp：', cp)
+                ctx.infoLog.info('cp结束')
             } catch (e) {
                 ctx.infoLog.info(e)
                 error = e
