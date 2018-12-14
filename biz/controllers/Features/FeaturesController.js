@@ -6,7 +6,6 @@ export default class Features {
         var execSync = require('child_process').execSync;
         var cmdNpm = 'npm run build'
 
-        console.log(1111)
         let error = ''
         let res = ''
         try {
