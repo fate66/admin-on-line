@@ -20,7 +20,7 @@ export default class Features {
                 res = execSync(cmdNpm, {cwd: '/root/web-admin'})
                 ctx.infoLog.info('npm run build：', res)
             } catch (e) {
-                ctx.infoLog.info(e)
+                ctx.infoLog.info('npm run build error:', e)
                 error = e
             }
         }
@@ -29,7 +29,7 @@ export default class Features {
                 let cp = execSync('cp -rf /root/web-admin/dist/* /root/admin-server/static')
                 ctx.infoLog.info('cp结束')
             } catch (e) {
-                ctx.infoLog.info(e)
+                ctx.infoLog.info('cp error:', e)
                 error = e
             }
         }
